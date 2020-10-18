@@ -1,0 +1,20 @@
+read n
+for ((i=2;i<n;i++))
+do
+if [ $i == 2 ]
+then		
+echo "2"
+fi
+for((j=2;j<i;j++))
+do
+a=`expr $i % $j` 
+b=`expr $j + 1`
+if [ $a == 0 ]
+then
+break
+elif [ $i == $b ]
+then
+echo "$i"
+fi
+done
+done	
