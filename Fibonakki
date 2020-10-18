@@ -1,0 +1,11 @@
+echo "Enter how many index you want to check:"
+read val
+a=1
+b=-1
+for((i=0;i<val;i++))
+do
+c=`expr $a + $b`
+echo $c
+b=$a
+a=$c
+done
