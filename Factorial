@@ -1,0 +1,36 @@
+  
+echo "Enter the number of items"
+read n
+echo "Enter items in ascending order"
+for((i=0;i<$n;i++))
+do
+read A[$i]
+done
+echo "Enter search  item"
+read i
+tem
+first=0
+last=`expr $n - 1`
+while (($first<=$last))
+do
+x=`expr $first + $last`
+mid=`expr $x / 2`
+if(($item==${A[$mid]}))
+ then
+flag=1
+break
+else
+if(($item>${A[$mid]}))
+then
+ first=`expr $mid + 1`
+else
+last=`expr $mid - 1`
+fi
+fi
+  done
+if [[ $flag = 1 ]]
+ then
+echo "Itemm found"
+else
+echo "Item not found"
+fi
