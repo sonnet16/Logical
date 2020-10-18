@@ -1,0 +1,24 @@
+echo "enter a"
+read a
+echo "enter b"
+read b
+echo "enter c"
+read c
+if [ $a -lt $b ]
+	then
+	if [ $a -lt $c ]
+	then
+	echo " $a is smallest"
+exit
+	fi
+	echo " $c is smallest"
+fi
+if [ $b -lt $a ]
+	then
+	if [ $b -lt $c ]
+	then
+	echo " $b is smallest"
+	fi
+	echo " $c is smallest"
+fi
+done
